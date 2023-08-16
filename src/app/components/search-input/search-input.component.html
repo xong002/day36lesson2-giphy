@@ -1,0 +1,15 @@
+<h1>Search Giphy</h1>
+<form [formGroup]="searchForm" (ngSubmit)="searchGiphy()">
+  <input type="text" formControlName="searchTerm" />
+  <button>Search</button>
+</form>
+<!-- <img [src]="giphyURL" alt=""> -->
+<ul>
+  <li *ngFor="let g of giphyURLArray" style="list-style-type: none">
+    <img
+      [src]="g"
+      width="250px"
+      height="250px"
+    />
+  </li>
+</ul>
